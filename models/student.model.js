@@ -17,7 +17,7 @@ const schema = new mongoose.Schema(
         curp: {
             type: String,
             required: [true, "Falta la curp"],
-            uppercase: [true, "Curp en mayusculas porfavor"],
+            uppercase: [true, "Curp en MAYUSCULAS"],
             match: [
               /^([A-Z][AEIOUX][A-Z]{2}\d{2}(?:0[1-9]|1[0-2])(?:0[1-9]|[12]\d|3[01])[HM](?:AS|B[CS]|C[CLMSH]|D[FG]|G[TR]|HG|JC|M[CNS]|N[ETL]|OC|PL|Q[TR]|S[PLR]|T[CSL]|VZ|YN|ZS)[B-DF-HJ-NP-TV-Z]{3}[A-Z\d])(\d)$/,
               "Curp no valida",
@@ -45,7 +45,7 @@ const schema = new mongoose.Schema(
             required: [true, "Falta la carrera"],
             enum: {
               values: ["ISC", "IM", "IGE", "IC"],
-              message: "Carrera {VALUE} no soportada",
+              message: "Carrera {VALUE} no valida",
             },
           },
         }
